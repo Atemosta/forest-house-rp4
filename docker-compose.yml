@@ -9,9 +9,9 @@ services:
       - ${APP_HOMER_PORT}:${APP_HOMER_PORT}
     user: 1000:1000 # default
     volumes:
-      - ${LOCAL_FILE_PATH}/homer:/www/assets
+      - ${APP_DATA_DIR}/homer:/www/assets
     environment:
-      - INIT_ASSETS=0 # default
+      - INIT_ASSETS=0 # 1 is default
   vaultwarden:
     image: vaultwarden/server:latest
     container_name: vaultwarden
@@ -22,4 +22,4 @@ services:
     environment:
       ROCKET_PORT: "${APP_VAULTWARDEN_PORT}"
     volumes:
-      - ${LOCAL_FILE_PATH}/vaultwarden/data:/data
+      - ${APP_DATA_DIR}/vaultwarden/data:/data
