@@ -1,15 +1,25 @@
+# .env for environment variables
 ---
-version: "2"
+version: "3"
 services:
   homer:
     image: b4bz/homer
-    #To build from source, comment previous line and uncomment below
-    #build: .
     container_name: homer
-    volumes:
-      - /forest-house-k4/data/homer:/www/assets
     ports:
-      - 8080:8080
+      - ${APP_HOMER_PORT}:${APP_HOMER_PORT}
     user: 1000:1000 # default
+    volumes:
+      - ${LOCAL_FILE_PATH}/homer:/www/assets
     environment:
-      - INIT_ASSETS=1 # default
+      - INIT_ASSETS=0 # default
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    ports:
+      - ${APP_VAULTWARDEN_PORT}:${APP_VAULTWARDEN_PORT}
+    restart: always
+    user: 1000:1000
+    environment:
+      ROCKET_PORT: "${APP_VAULTWARDEN_PORT}"
+    volumes:
+      - ${LOCAL_FILE_PATH}/vaultwarden/data:/data
