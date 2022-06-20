@@ -1,5 +1,5 @@
 # rp3-docker-compose
-Various Docker Compose deployments for use with the Raspberry Pi 3+ (and above verisons)
+Docker Compose deployment for self-hosted open-source application usage (inspired by Umbrel OS)
 
 ## List of Projects
 * [Homer](https://github.com/bastienwirtz/homer) - A very simple static homepage for your server.
@@ -9,8 +9,8 @@ Various Docker Compose deployments for use with the Raspberry Pi 3+ (and above v
 ### Before running docker-compose up -d 
 Run the following command to move all the config files
 ```
-chmod +x initial-config.sh
-./initial-config.sh
+chmod +x deploy-services.sh
+./deploy-services.sh
 ```
 ### [Enable docker user to write into assets directory](https://devanswers.co/how-to-view-file-and-folder-permissions-in-ubuntu/)
 `sudo chmod 777 /forest-house-k4/data/*`
