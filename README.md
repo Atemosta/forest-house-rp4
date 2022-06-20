@@ -9,11 +9,8 @@ Various Docker Compose deployments for use with the Raspberry Pi 3+ (and above v
 ### Before running docker-compose up -d 
 Run the following command to move all the config files
 ```
-export LOCAL_FILE_PATH=/forest-house-k4/data
-mkdir /forest-house-k4/
-mkdir /forest-house-k4/data
-cp homer/config.yml $LOCAL_FILE_PATH/homer/
-cp vaultwarden/.env $LOCAL_FILE_PATH/vaultwarden/data
+chmod +x initial-config.sh
+./initial-config.sh
 ```
 ### [Enable docker user to write into assets directory](https://devanswers.co/how-to-view-file-and-folder-permissions-in-ubuntu/)
 `sudo chmod 777 /forest-house-k4/data/*`
