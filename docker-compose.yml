@@ -1,0 +1,25 @@
+# .env for environment variables
+---
+version: "3"
+services:
+  homer:
+    image: b4bz/homer
+    container_name: homer
+    ports:
+      - ${APP_HOMER_PORT}:${APP_HOMER_PORT}
+    user: 1000:1000 # default
+    volumes:
+      - ${APP_DATA_DIR}/homer:/www/assets
+    environment:
+      - INIT_ASSETS=0 # 1 is default
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    ports:
+      - ${APP_VAULTWARDEN_PORT}:${APP_VAULTWARDEN_PORT}
+    restart: always
+    user: 1000:1000
+    environment:
+      ROCKET_PORT: "${APP_VAULTWARDEN_PORT}"
+    volumes:
+      - ${APP_DATA_DIR}/vaultwarden/data:/data
