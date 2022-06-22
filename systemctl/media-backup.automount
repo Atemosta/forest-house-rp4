@@ -1,8 +1,8 @@
 [Unit]
-Description=Automount USB Backup
+Description=Automount HDD Backup
 
 [Automount]
-Where=/media/backup
+Where=/mnt/bkup
 
 [Install]
 WantedBy=multi-user.target
