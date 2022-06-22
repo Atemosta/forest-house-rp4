@@ -1,0 +1,9 @@
+[Unit]
+Description=backup the vaultwarden sqlite database and attachments
+
+[Service]
+Type=oneshot
+WorkingDirectory=/media/backup
+ExecStart=/usr/bin/env sh -c 'sqlite3 /forest-house-k4/data/vaultwarden/data/db.sqlite3 ".backup bkup-vw-$(date -Is | tr : _).sq3"'
+ExecStart=/usr/bin/env sh -c 'tar cvfz bkup-vw-attachments-$(date -Is | tr : _).tar.gz /forest-house-k4/data/vaultwarden/data/attachments/'
+ExecStart=/usr/bin/find . -type f -mtime +30 -name 'bkup-vw-*' -delete

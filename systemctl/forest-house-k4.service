@@ -1,0 +1,21 @@
+[Unit]
+Description=Forest-House-K4
+After=docker.service network.target
+Requires=docker.service network-online.target
+
+[Service]
+RemainAfterExit=true
+WorkingDirectory=/home/pi
+ExecStartPre=/usr/local/bin/docker-compose pull --quiet
+ExecStart=/usr/local/bin/docker-compose up
+
+ExecReload=/usr/local/bin/docker-compose pull --quiet
+ExecReload=/usr/local/bin/docker-compose up
+
+ExecStop=/usr/local/bin/docker-compose down
+
+Restart=always
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Additional drive
+
+[Mount]
+What=/dev/sda1
+Where=/media/backup
+Type=exfat
+Options=defaults
+
+[Install]
+WantedBy=multi-user.target
