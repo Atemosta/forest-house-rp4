@@ -79,15 +79,20 @@ services:
       - name: "Pi-hole"
         logo: "assets/tools/sample.png"
         subtitle: "DNS Sinkhole"
-        tag: "app"
         url: "http://192.168.1.21:80/admin"
       # - name: "Synapse"
       #   logo: "assets/tools/sample.png"
       #   subtitle: "Matrix homeserver written in Python 3/Twisted."
       #   tag: "app"
       #   url: "http://localhost:8008"
+      - name: "Uptime Kuma"
+        logo: "assets/tools/sample2.png"
+        subtitle: "Application Monitioring"
+        url: "http://192.168.1.19:8385"
       - name: "Vaultwarden"
         logo: "assets/tools/sample2.png"
         subtitle: "Password Manager"
-        tag: "app"
         url: "http://192.168.1.21:8089"
+
+
+
