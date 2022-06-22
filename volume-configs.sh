@@ -13,4 +13,4 @@ cp vaultwarden/.env $APP_DATA_DIR/vaultwarden/data
 sudo chmod 777 $APP_DATA_DIR/vaultwarden/data*
 
 # Successfully ran!
-echo "Successfully ran deploy-services.sh!"
+echo "Successfully ran volume-configs.sh!"
