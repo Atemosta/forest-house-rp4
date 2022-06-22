@@ -9,8 +9,8 @@ Docker Compose deployment for self-hosted open-source application usage (inspire
 ### Before running docker-compose up -d 
 Run the following command to move all the config files
 ```
-chmod +x deploy-services.sh
-./deploy-services.sh
+chmod +x volumes-configs.sh
+./volumes-configs.sh
 ```
 ### [Enable docker user to write into assets directory](https://devanswers.co/how-to-view-file-and-folder-permissions-in-ubuntu/)
 `sudo chmod 777 /forest-house-k4/data/*`
