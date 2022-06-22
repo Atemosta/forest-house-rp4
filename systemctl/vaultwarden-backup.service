@@ -1,0 +1,10 @@
+[Unit]
+Description=backup the vaultwarden sqlite database and attachments
+
+[Service]
+Type=oneshot
+WorkingDirectory=/media/backup
+ExecStart=/usr/bin/env sh -c 'sqlite3 /home/pi/bw-data//db.sqlite3 ".backup backup-$(date -Is | tr : _).sq3"'
+ExecStart=/usr/bin/env sh -c 'tar cvfz bw-attachments-$(date -Is | tr : _).tar.gz /home/pi/bw-data/attachments/'
+ExecStart=/usr/bin/find . -type f -mtime +30 -name 'backup*' -delete
+ExecStart=/usr/bin/find . -type f -mtime +30 -name 'bw-attachments*' -delete

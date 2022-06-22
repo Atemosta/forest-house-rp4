@@ -1,0 +1,11 @@
+[Unit]
+Description=Additional drive
+
+[Mount]
+What=/dev/disk/by-uuid/6080-1BC0
+Where=/media/backup
+Type=exfat
+Options=defaults
+
+[Install]
+WantedBy=multi-user.target
