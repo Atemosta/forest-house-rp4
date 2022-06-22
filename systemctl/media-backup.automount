@@ -2,7 +2,7 @@
 Description=Automount HDD Backup
 
 [Automount]
-Where=/mnt/bkup
+Where=/media/backup
 
 [Install]
 WantedBy=multi-user.target

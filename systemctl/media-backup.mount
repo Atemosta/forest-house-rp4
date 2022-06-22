@@ -3,7 +3,7 @@ Description=Additional drive
 
 [Mount]
 What=/dev/sda1
-Where=/mnt/bkup
+Where=/media/backup
 Type=exfat
 Options=defaults
 
