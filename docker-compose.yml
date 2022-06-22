@@ -3,8 +3,8 @@
 version: "3"
 services:
   homer:
-    image: b4bz/homer
-    container_name: homer:22.02.1
+    image: b4bz/homer:22.02.2
+    container_name: homer
     ports:
       - ${APP_HOMER_PORT}:${APP_HOMER_PORT}
     user: 1000:1000 # default
