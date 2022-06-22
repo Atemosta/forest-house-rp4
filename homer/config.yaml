@@ -3,7 +3,7 @@
 # See https://fontawesome.com/v5/search for icons options
 
 title: "Welcome to the World of Blades"
-subtitle: "Forest House RP3"
+subtitle: "Homer"
 logo: "logo.png"
 # icon: "fas fa-skull-crossbones" # Optional icon
 
@@ -71,23 +71,15 @@ services:
   - name: "Applications"
     icon: "fas fa-cloud"
     items:
-      # - name: "Element"
-      #   logo: "assets/tools/sample.png"
-      #   subtitle: "A glossy Matrix collaboration client for the web."
-      #   tag: "app"
-      #   url: "http://localhost:8088"
       - name: "Pi-hole"
         logo: "assets/tools/sample.png"
         subtitle: "DNS Sinkhole"
         tag: "app"
-        url: "http://192.168.1.21:80/admin"
-      # - name: "Synapse"
-      #   logo: "assets/tools/sample.png"
-      #   subtitle: "Matrix homeserver written in Python 3/Twisted."
-      #   tag: "app"
-      #   url: "http://localhost:8008"
-      - name: "Vaultwarden"
+        keywords: "self hosted reddit"
+        url: "192.168.1.21"
+        target: "_blank" # optional html a tag target attribute
+      - name: "VaultWarden"
         logo: "assets/tools/sample2.png"
         subtitle: "Password Manager"
         tag: "app"
-        url: "http://192.168.1.21:8089"
+        url: "192.168.1.21:8089"

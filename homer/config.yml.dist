@@ -2,8 +2,8 @@
 # Homepage configuration
 # See https://fontawesome.com/v5/search for icons options
 
-title: "Welcome to the World of Blades"
-subtitle: "Forest House RP3"
+title: "Demo dashboard"
+subtitle: "Homer"
 logo: "logo.png"
 # icon: "fas fa-skull-crossbones" # Optional icon
 
@@ -41,28 +41,28 @@ colors:
     link-hover: "#ffdd57"
 
 # Optional message
-# message:
-#   #url: https://b4bz.io
-#   style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
-#   title: "Demo !"
-#   icon: "fa fa-grin"
-#   content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirtz/homer'>github.com/bastienwirtz/homer</a>"
+message:
+  #url: https://b4bz.io
+  style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+  title: "Demo !"
+  icon: "fa fa-grin"
+  content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirtz/homer'>github.com/bastienwirtz/homer</a>"
 
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
-# links:
-#   - name: "Contribute"
-#     icon: "fab fa-github"
-#     url: "https://github.com/bastienwirtz/homer"
-#     target: "_blank" # optional html a tag target attribute
-#   - name: "Wiki"
-#     icon: "fas fa-book"
-#     url: "https://www.wikipedia.org/"
-#   # this will link to a second homer page that will load config from additional-page.yml and keep default config values as in config.yml file
-#   # see url field and assets/additional-page.yml.dist used in this example:
-#   - name: "another page!"
-#     icon: "fas fa-file-alt"
-#     url: "#additional-page" 
+links:
+  - name: "Contribute"
+    icon: "fab fa-github"
+    url: "https://github.com/bastienwirtz/homer"
+    target: "_blank" # optional html a tag target attribute
+  - name: "Wiki"
+    icon: "fas fa-book"
+    url: "https://www.wikipedia.org/"
+  # this will link to a second homer page that will load config from additional-page.yml and keep default config values as in config.yml file
+  # see url field and assets/additional-page.yml.dist used in this example:
+  - name: "another page!"
+    icon: "fas fa-file-alt"
+    url: "#additional-page" 
 
 # Services
 # First level array represent a group.
@@ -71,23 +71,15 @@ services:
   - name: "Applications"
     icon: "fas fa-cloud"
     items:
-      # - name: "Element"
-      #   logo: "assets/tools/sample.png"
-      #   subtitle: "A glossy Matrix collaboration client for the web."
-      #   tag: "app"
-      #   url: "http://localhost:8088"
-      - name: "Pi-hole"
+      - name: "Awesome app"
         logo: "assets/tools/sample.png"
-        subtitle: "DNS Sinkhole"
+        subtitle: "Bookmark example"
         tag: "app"
-        url: "http://192.168.1.21:80/admin"
-      # - name: "Synapse"
-      #   logo: "assets/tools/sample.png"
-      #   subtitle: "Matrix homeserver written in Python 3/Twisted."
-      #   tag: "app"
-      #   url: "http://localhost:8008"
-      - name: "Vaultwarden"
+        keywords: "self hosted reddit"
+        url: "https://www.reddit.com/r/selfhosted/"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Another one"
         logo: "assets/tools/sample2.png"
-        subtitle: "Password Manager"
+        subtitle: "Another application"
         tag: "app"
-        url: "http://192.168.1.21:8089"
+        url: "#"
