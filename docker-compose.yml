@@ -22,3 +22,6 @@ services:
       ROCKET_PORT: "${APP_VAULTWARDEN_PORT}"
     volumes:
       - ${APP_DATA_DIR}/vaultwarden/data:/data
+
+# docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v ncdata:/data --name nextcloudpi ownyourbits/nextcloudpi $DOMAIN
+# docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /forest-house-k4/data/nextcloudpi:/data --name nextcloudpi ownyourbits/nextcloudpi localhost
