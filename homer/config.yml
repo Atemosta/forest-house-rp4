@@ -4,7 +4,9 @@
 
 title: "Welcome to the World of Blades"
 subtitle: "Forest House RP3"
-logo: "logo.png"
+logo: "assets/icons/icon-any.png"
+# logo: "fas fa-swords"
+# icon: "fas fa-swords"
 # icon: "fas fa-skull-crossbones" # Optional icon
 
 header: true
@@ -76,10 +78,6 @@ services:
       #   subtitle: "A glossy Matrix collaboration client for the web."
       #   tag: "app"
       #   url: "http://localhost:8088"
-      - name: "Gitea"
-        logo: "assets/tools/gitea.svg"
-        subtitle: "Git Repository"
-        url: "http://192.168.1.19:8085"
       - name: "Nextcloud"
         logo: "assets/tools/nextcloud.svg"
         subtitle: "Cloud Storage"
@@ -94,7 +92,7 @@ services:
         url: "http://192.168.1.21:80/admin"
       - name: "SimpleTorrent"
         logo: "assets/tools/simpletorrent.svg"
-        subtitle: "Simple Torrenting lul"
+        subtitle: "Paying for stuff KEKW"
         url: "http://192.168.1.19:8086/"
       # - name: "Synapse"
       #   logo: "assets/tools/sample.png"
@@ -143,6 +141,14 @@ services:
         logo: "assets/tools/btcpay.svg"
         subtitle: "Bitcoin Store"
         url: "http://192.168.1.19:3003/login?ReturnUrl=%2F"
+      - name: "Gitea"
+        logo: "assets/tools/gitea.svg"
+        subtitle: "Git Repository"
+        url: "http://192.168.1.19:8085"
+      - name: "Rocket.Chat"
+        logo: "assets/tools/rocket-chat.png"
+        subtitle: "Open Source Team Communication"
+        url: "http://192.168.1.19:8085"
         
 
 
