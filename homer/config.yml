@@ -145,11 +145,3 @@ services:
         logo: "assets/tools/gitea.svg"
         subtitle: "Git Repository"
         url: "http://umbrel.local:8085"
-      - name: "Rocket.Chat"
-        logo: "assets/tools/rocket-chat.png"
-        subtitle: "Open Source Team Communication"
-        url: "http://forest-house-rp4.local:3000"
-        
-
-
-
