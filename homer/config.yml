@@ -148,7 +148,7 @@ services:
       - name: "Rocket.Chat"
         logo: "assets/tools/rocket-chat.png"
         subtitle: "Open Source Team Communication"
-        url: "http://umbrel.local:8085"
+        url: "http://forest-house-rp4.local:3000"
         
 
 
