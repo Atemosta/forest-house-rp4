@@ -13,6 +13,7 @@ services:
       - INIT_ASSETS=0 # 1 is default
   app:
     image: matrixdotorg/synapse
+    container_name: matrix
     restart: always
     ports:
       - 8008:8008
