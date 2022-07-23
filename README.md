@@ -7,7 +7,7 @@ Docker Compose deployment for self-hosted open-source application usage (inspire
 * [Vaultwarden](https://github.com/dani-garcia/vaultwarden) - Password Manager
 
 ## Personal Notes
-### Install Docker on ARM64 Ubuntu
+### Install Docker on ARM64 Ubuntu Server OS
 Install Docker
 ```
 # Install Docker
