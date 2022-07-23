@@ -1,5 +1,5 @@
 # Forest-House-RP4
-Docker Compose deployment for self-hosted open-source application usage (inspired by Umbrel OS), currently deployed on a [Raspeberry PI 4 Model B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/).
+Docker Compose deployment for self-hosted open-source application usage (inspired by Umbrel OS), currently deployed on a [Raspeberry PI 4 Model B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
 
 ## List of Projects
 * [Homer](https://github.com/bastienwirtz/homer) - A very simple static homepage for your server.
