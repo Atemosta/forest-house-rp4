@@ -18,10 +18,10 @@ echo "Successfully configured volumes!"
 
 # Shut down docker services
 echo "Attempting to shut down docker services..."
-docker-compose down
+docker compose down
 echo "Successfully shut down docker services!"
 
 # Deploy docker services
 echo "Attempting to start docker services..."
-docker-compose up -d
+docker compose up -d
 echo "Successfully started docker services!"
