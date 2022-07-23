@@ -16,6 +16,8 @@ sudo apt install docker.io
 usermod -aG docker $USER
 # Restart PI for user group changes to take effect
 sudo reboot
+# Test Docker Installation
+docker run hello-world
 ```
 
 Install Docker Compose
@@ -26,6 +28,8 @@ mkdir -p ~/.docker/cli-plugins
 curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-aarch64 -o ~/.docker/cli-plugins/docker-compose
 # make the CLI executable
 chmod +x ~/.docker/cli-plugins/docker-compose
+# Test Docker Compose Installation 
+docker compose version
 ```
 ### Configuring and Deploying the Services
 ```
