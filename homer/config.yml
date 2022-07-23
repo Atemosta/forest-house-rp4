@@ -89,7 +89,7 @@ services:
       - name: "Pi-hole"
         logo: "assets/tools/pi-hole.svg"
         subtitle: "DNS Sinkhole"
-        url: "http://forest-house-rp3.local:80/admin"
+        url: "http://umbrellocal:8082/admin"
       - name: "SimpleTorrent"
         logo: "assets/tools/simpletorrent.svg"
         subtitle: "Paying for stuff KEKW"
@@ -110,7 +110,7 @@ services:
       - name: "Vaultwarden"
         logo: "assets/tools/vaultwarden.svg"
         subtitle: "Password Manager"
-        url: "http://forest-house-rp3.local:8089"
+        url: "http://ForestHouseRP4.local:8089"
   - name: "Communities"
     icon: "fas fa-cloud"
     items:
@@ -130,6 +130,10 @@ services:
         logo: "assets/tools/github.png"
         subtitle: "Bridging Imperfect Realities"
         url: "https://github.com/oscarkevinxr"
+      - name: "Twitch (Ousikai)"
+        logo: "assets/tools/github.png"
+        subtitle: "Waste my time 2022"
+        url: "https://www.twitch.tv/ousikai"
   - name: "Enterprise"
     icon: "fas fa-cloud"
     items:
