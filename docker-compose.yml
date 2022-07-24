@@ -5,6 +5,7 @@ services:
   homer:
     image: b4bz/homer:22.02.2
     container_name: homer
+    restart: always
     ports:
       - ${APP_HOMER_PORT}:${APP_HOMER_PORT}
     volumes:
