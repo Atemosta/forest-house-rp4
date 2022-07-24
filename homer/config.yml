@@ -89,7 +89,7 @@ services:
       - name: "Pi-hole"
         logo: "assets/tools/pi-hole.svg"
         subtitle: "DNS Sinkhole"
-        url: "http://umbrellocal:8082/admin"
+        url: "http://umbrel.local:8082/admin"
       - name: "SimpleTorrent"
         logo: "assets/tools/simpletorrent.svg"
         subtitle: "Paying for stuff KEKW"
