@@ -5,12 +5,21 @@ services:
   homer:
     image: b4bz/homer:22.02.2
     container_name: homer
+    restart: always
     ports:
       - ${APP_HOMER_PORT}:${APP_HOMER_PORT}
     volumes:
       - ${APP_DATA_DIR}/homer:/www/assets
     environment:
       - INIT_ASSETS=0 # 1 is default
+  app:
+    image: matrixdotorg/synapse
+    container_name: matrix
+    restart: always
+    ports:
+      - 8008:8008
+    volumes:
+      - ${APP_DATA_DIR}/matrix:/data
   vaultwarden:
     image: vaultwarden/server:latest
     container_name: vaultwarden
@@ -23,5 +32,5 @@ services:
     volumes:
       - ${APP_DATA_DIR}/vaultwarden/data:/data
 
-# docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v ncdata:/data --name nextcloudpi ownyourbits/nextcloudpi $DOMAIN
-# docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /forest-house-k4/data/nextcloudpi:/data --name nextcloudpi ownyourbits/nextcloudpi localhost
+# docker run -it --rm -v ${APP_DATA_DIR}/matrix:/data  -e SYNAPSE_SERVER_NAME=atemosta.com -e SYNAPSE_REPORT_STATS=yes matrixdotorg/synapse:latest generate
+# sudo certbot --nginx -d matrix.atemosta.com
