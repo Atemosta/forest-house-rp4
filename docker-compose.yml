@@ -17,7 +17,7 @@ services:
     container_name: matrix
     restart: always
     ports:
-      - 8008:8008
+      - ${APP_MATRIX_PORT}:${APP_MATRIX_PORT}
     volumes:
       - ${APP_DATA_DIR}/matrix:/data
   vaultwarden:

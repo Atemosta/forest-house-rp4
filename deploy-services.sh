@@ -15,6 +15,13 @@ mkdir -p $APP_DATA_DIR/matrix
 cp matrix/homeserver.yaml $APP_DATA_DIR/matrix/
 sudo chmod 777 $APP_DATA_DIR/matrix*
 
+# Nextcloud Config
+mkdir $APP_DATA_DIR/nextcloud -p
+mkdir $APP_DATA_DIR/nextcloud/data -p
+mkdir $APP_DATA_DIR/nextcloud/mysql -p
+mkdir $APP_DATA_DIR/nextcloud/appdata -p
+sudo chmod 777 $APP_DATA_DIR/nextcloud*
+
 # Vaultwarden Config
 mkdir -p $APP_DATA_DIR/vaultwarden/data
 cp vaultwarden/.env $APP_DATA_DIR/vaultwarden/data
