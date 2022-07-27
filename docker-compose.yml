@@ -12,7 +12,7 @@ services:
       - ${APP_DATA_DIR}/homer:/www/assets
     environment:
       - INIT_ASSETS=0 # 1 is default
-  app:
+  matrix:
     image: matrixdotorg/synapse
     container_name: matrix
     restart: always
@@ -20,6 +20,34 @@ services:
       - ${APP_MATRIX_PORT}:${APP_MATRIX_PORT}
     volumes:
       - ${APP_DATA_DIR}/matrix:/data
+  nextcloud_db:
+    container_name: nextcloud_db
+    image: mariadb
+    restart: always
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW --innodb-file-per-table=1 --skip-innodb-read-only-compressed
+    volumes:
+      - ${APP_DATA_DIR}/nextcloud/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: <YOUR_GENERATED_PASSWORD>
+      MYSQL_PASSWORD: <YOUR_GENERATED_PASSWORD>
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: nextcloud
+  nextcloud:
+    container_name: nextcloud
+    image: lscr.io/linuxserver/nextcloud
+    restart: always
+    ports:
+      - ${APP_NEXTCLOUD_PORT}:443
+    links:
+      - nextcloud_db
+    volumes:
+      - ${APP_DATA_DIR}/nextcloud/appdata:/config
+      - ${APP_DATA_DIR}/nextcloud/data:/data
+    environment:
+      MYSQL_PASSWORD: <YOUR_GENERATED_PASSWORD>
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: nextcloud
+      MYSQL_HOST: nextcloud_db
   vaultwarden:
     image: vaultwarden/server:latest
     container_name: vaultwarden
